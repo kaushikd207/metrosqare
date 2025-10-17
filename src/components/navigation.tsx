@@ -14,7 +14,7 @@ import { Menu } from "lucide-react";
 
 const navigationLinks = [
   { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
+  { href: "/properties", label: "Listings" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -56,7 +56,7 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
                 <SheetHeader>
-                  <SheetTitle className="text-left">MAK</SheetTitle>
+                  <SheetTitle className="text-left">Metrosquare</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8">
                   {navigationLinks.map((link) => (
