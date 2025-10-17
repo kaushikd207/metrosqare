@@ -1,9 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
+import { PropertyCard } from '@/components/PropertyCard';
 import Link from "next/link";
 import Image from "next/image";
 import { Building2, FileCheck, Clock, Wrench, Shield, Users } from "lucide-react";
+
+const properties = [
+  {
+    id: 1,
+    image: "img1.jpg",
+    name: "Casagrand Hazen",
+    price: "₹52 Lakhs",
+    location: "Bannerghatta Road, Bangalore",
+    developer: "Casagrand",
+    configuration: "1 BHK, 2 BHK, 3 BHK, 4 BHK",
+    builtUpArea: "600 sq.ft",
+  },
+  {
+    id: 2,
+    image: "img2.jpg",
+    name: "Brigade Eldorado",
+    price: "₹85 Lakhs",
+    location: "Whitefield, Bangalore",
+    developer: "Brigade",
+    configuration: "2 BHK, 3 BHK",
+    builtUpArea: "1200 sq.ft",
+  },
+  {
+    id: 3,
+    image: "img3.jpg",
+    name: "Prestige Willow",
+    price: "₹1.2 Cr",
+    location: "Electronic City, Bangalore",
+    developer: "Prestige",
+    configuration: "3 BHK, 4 BHK",
+    builtUpArea: "1800 sq.ft",
+  },
+];
 
 export default function Home() {
   return (
@@ -88,7 +122,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+   {/* Featured Properties Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-900 mb-4">
+              Featured Properties
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover our handpicked selection of premium properties in Bangalore's most sought-after locations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {properties.map((property) => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
 
+          <div className="text-center mt-12">
+            <Button 
+              variant="outline" 
+              className="border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
+            >
+              View All Properties
+            </Button>
+          </div>
+        </div>
+      </section>
       {/* About Metrosquare Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -341,6 +402,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+   
 
       {/* Contact CTA */}
       <section className="py-24 bg-sky-400">
