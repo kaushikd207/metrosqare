@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { PlusCircle, List, Menu, X, LogOut } from 'lucide-react';
+import { PlusCircle, List, Menu, X, LogOut, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const supabase = createClient(
@@ -28,6 +28,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       title: 'View Listings',
       href: '/admin-Mxtxrx/listings',
       icon: List,
+    },
+    {
+      title: 'Feedback',
+      href: '/admin-Mxtxrx/feedback',
+      icon: MessageSquare,
     }
   ];
 

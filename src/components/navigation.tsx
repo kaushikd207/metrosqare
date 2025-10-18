@@ -11,6 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 const navigationLinks = [
   { href: "/services", label: "Services" },
@@ -27,8 +28,14 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-900 tracking-tight">
-            MetroSquare 
+            <Link href="/" className="text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+              <Image 
+                src="/metro_logo.png" 
+                width={100} 
+                height={100} 
+                alt="Metrosquare Logo"
+                priority
+              />
             </Link>
           </div>
 

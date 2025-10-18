@@ -1,10 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
 import { PropertyCard } from '@/components/PropertyCard';
 import Link from "next/link";
 import Image from "next/image";
-import { Building2, FileCheck, Clock, Wrench, Shield, Users } from "lucide-react";
+import { Building2, FileCheck, Clock, Wrench, Shield, Users, Mail, Phone } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ContactForm } from "@/components/ContactForm";
 
 
 // Update the Property interface to match the backend schema
@@ -39,6 +43,10 @@ export default async function Home() {
   console.log("data from the server",data)
   const properties = data.properties;
 
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  // Add your form submission logic here
+};
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -59,11 +67,11 @@ export default async function Home() {
             Metrosquare Realty
           </h1>
           <p className="text-xl md:text-2xl font-light mb-4 opacity-90">
-            Your Next Move Begins Here
+            SQUARE UP YOUR DREAMS
           </p>
-          <p className="text-lg md:text-xl font-light mb-8 opacity-80">
-            Honest advice, personalized service, and seamless experiences for every property journey in Bangalore.
-          </p>
+          {/* <p className="text-lg md:text-xl font-light mb-8 opacity-80">
+            Honest advice, personalized service, and seamless experiences for every property journey in Bangalore. */}
+          {/* </p> */}
           <Button
             size="lg"
             className="bg-sky-400 hover:bg-blue-800 text-white px-8 py-3 text-lg"
@@ -308,16 +316,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Get in Touch Button */}
-      <section className="py-12 bg-gray-50 text-center">
-        <Button
-          size="lg"
-          className="bg-sky-400 hover:bg-blue-800 text-white px-10 py-4 text-xl"
-        >
-          Get in Touch
-        </Button>
-      </section>
-
       {/* Testimonials Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,36 +420,21 @@ export default async function Home() {
 
       {/* Contact CTA */}
       <section className="py-24 bg-sky-400">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-light text-white mb-6">
-            Ready to Find Your Perfect Property?
+      {/* Get in Touch Section */}
+      
+      <section className="py-2">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-light text-gray-900 mb-4">
+            Get in Touch
           </h2>
-          <p className="text-xl text-blue-900 mb-8 max-w-2xl mx-auto">
-            Connect with our advisors for honest guidance and seamless property experiences in Bangalore.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have questions about our properties? Reach out to us, and our team will be happy to help.
           </p>
-          <div className="space-x-4  space-y-2">
-            <Button
-              size="lg"
-              className="bg-white text-sky-400 hover:bg-gray-100 px-8 py-3 text-lg"
-            >
-              Whatsapp: +91 6364 421 053
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white hover:bg-white text-sky-400 px-8 py-3 text-lg"
-            >
-              Email: office@metrosquare.co.in
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white hover:bg-white text-sky-400 px-8 py-3 text-lg"
-            >
-              Call: +91 6364 421 053
-            </Button>
-          </div>
         </div>
+
+
+            <ContactForm/>
+      </section> 
       </section>
 
       {/* Footer */}

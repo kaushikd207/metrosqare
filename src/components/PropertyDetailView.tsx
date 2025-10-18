@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Building2, MapPin, Phone, Mail, Check, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import {  MapPin, Phone, Mail, Check, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Navigation } from '@/components/navigation';
+import { ContactForm } from './ContactForm';
 
 interface Property {
   // Add all property fields here
@@ -156,28 +157,7 @@ export function PropertyDetailView({ property }: { property: Property }) {
 
 					{/* Sidebar */}
 					<div className="space-y-6">
-						<Card className="p-6">
-							<h3 className="text-xl font-semibold mb-4">Contact Metrosquare</h3>
-							<div className="space-y-4 mb-6">
-								<div className="flex items-center text-gray-600">
-									<Phone className="h-5 w-5 mr-2" />
-									<span>+91 6364 421 053</span>
-								</div>
-								<div className="flex items-center text-gray-600">
-									<Mail className="h-5 w-5 mr-2" />
-									<span>office@metrosquare.co.in</span>
-								</div>
-							</div>
-							<form className="space-y-4">
-								<Input placeholder="Your Name" />
-								<Input type="email" placeholder="Your Email" />
-								<Input type="tel" placeholder="Your Phone" />
-								<Textarea placeholder="Your Message" rows={4} />
-								<Button className="w-full bg-sky-500 hover:bg-sky-600">
-									Send Message
-								</Button>
-							</form>
-						</Card>
+								<ContactForm/>
 
 						<Card className="p-6">
 							<h3 className="text-xl font-semibold mb-4">Download</h3>
