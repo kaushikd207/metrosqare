@@ -8,7 +8,7 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-sky-400">Metrosquare Realty</h3>
+              <h3 className="text-2xl font-bold mb-4 text-sky-400 font-mont">METRO SQUARE Realty</h3>
               <p className="text-gray-300 mb-6">
                 Your trusted partner for buying, selling, and investing in Bangalore’s residential properties.
               </p>

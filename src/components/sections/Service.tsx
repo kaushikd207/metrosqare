@@ -131,29 +131,67 @@ function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <p className="text-gray-700 italic mb-4">
-                  “Metrosquare Realty made my first home purchase smooth and stress-free. Highly recommended!”
+                <div className="flex flex-col items-center mb-6">
+                  <div className="relative w-20 h-20 mb-4">
+                    <Image
+                      src="/customer-2.png"
+                      alt="Rahul Sharma"
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <div className="font-semibold text-sky-400">Rahul Sharma</div>
+                    <div className="text-gray-500 text-sm mb-4">Bangalore</div>
+                  </div>
+                </div>
+                <p className="text-gray-700 italic text-center">
+                 { "Metrosquare Realty made my first home purchase smooth and stress-free. Highly recommended!"}
                 </p>
-                <div className="font-semibold text-sky-400">Rahul Sharma</div>
-                <div className="text-gray-500 text-sm">Bangalore</div>
               </CardContent>
             </Card>
+
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <p className="text-gray-700 italic mb-4">
-                  “Professional, honest, and always available. They helped me get the best value for my property.”
+                <div className="flex flex-col items-center mb-6">
+                  <div className="relative w-20 h-20 mb-4">
+                    <Image
+                      src="/team-2.png"
+                      alt="Priya Menon"
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <div className="font-semibold text-sky-400">Priya Menon</div>
+                    <div className="text-gray-500 text-sm mb-4">Whitefield</div>
+                  </div>
+                </div>
+                <p className="text-gray-700 italic text-center">
+                  {"Professional, honest, and always available. They helped me get the best value for my property."}
                 </p>
-                <div className="font-semibold text-sky-400">Priya Menon</div>
-                <div className="text-gray-500 text-sm">Whitefield</div>
               </CardContent>
             </Card>
+
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <p className="text-gray-700 italic mb-4">
-                  “Great team and excellent service. My investment journey was seamless thanks to Metrosquare.”
+                <div className="flex flex-col items-center mb-6">
+                  <div className="relative w-20 h-20 mb-4">
+                    <Image
+                      src="/customer-1.png"
+                      alt="Amit Desai"
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <div className="font-semibold text-sky-400">Amit Desai</div>
+                    <div className="text-gray-500 text-sm mb-4">Koramangala</div>
+                  </div>
+                </div>
+                <p className="text-gray-700 italic text-center">
+                {  "Great team and excellent service. My investment journey was seamless thanks to Metrosquare."}
                 </p>
-                <div className="font-semibold text-sky-400">Amit Desai</div>
-                <div className="text-gray-500 text-sm">Koramangala</div>
               </CardContent>
             </Card>
           </div>
@@ -222,4 +260,4 @@ function Services() {
   )
 }
 
-export default Services 
+export default Services

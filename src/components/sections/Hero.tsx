@@ -40,14 +40,20 @@ export function Hero() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-gray-900/60" />
+          <div className="absolute inset-0 bg-blue-400/60" />
         </div>
       ))}
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-sky-400">
-          Metro Square Realty
+        <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-[#0a213f] font-mont">
+         <span className='font-semibold'>
+           METRO 
+          </span>
+          SQUARE 
+          REALTY
+          {/* <span className='text-blue-500 block '>
+          </span> */}
         </h1>
         <p className="text-xl md:text-2xl font-light mb-4 opacity-90">
           SQUARE UP YOUR DREAMS
