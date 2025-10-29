@@ -1,12 +1,8 @@
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
 import { PropertyCard } from '@/components/PropertyCard';
 import Link from "next/link";
-import Image from "next/image";
 
-import {  Clock, Wrench, Shield, Users } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import Footer from "@/components/sections/Footer";
 import About from "@/components/sections/About";
@@ -99,18 +95,17 @@ export default async function Home() {
       </section>
       {/* Stress Free Property Journey Section */}
       <Journey/>
-
-      {/* About Metrosquare Section */}
       <About/>
-      {/* Services Section */}
-            <Services/>
+      <div id="services">
+        <Services/>
+      </div>
 
 
       {/* Contact CTA */}
-      <section className="py-24 bg-sky-400">
+      <section className="py-24 bg-sky-400" id="contact"> 
       {/* Get in Touch Section */}
       
-      <section className="py-2">
+      <section className="py-2" >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-light text-gray-900 mb-4">
             Get in Touch
